@@ -1,0 +1,135 @@
+PROJECT_PATH: C:\Users\A\Downloads\temp\GNN_Earthquake\Earthquake_GNN
+[ok] kagglehub
+[ok] pyarrow
+[ok] joblib
+[ok] optuna
+[ok] sklearn
+[ok] tqdm
+[ok] torch
+[ok] torch_geometric
+DEVICE: cuda
+PYG_AVAILABLE: True
+{
+  "USE_SAMPLE_FOR_DEBUG": false,
+  "RUN_LSTM": true,
+  "RUN_GAT": true,
+  "RUN_HYPERPARAM_TUNING": false,
+  "TRAIN_RATIO": 0.85,
+  "VAL_RATIO": 0.075,
+  "MAINSHOCK_MAG_THRESHOLD": 5.5,
+  "LEAD_DAYS": 30,
+  "SPATIAL_RADIUS_KM": 100.0
+}
+Loaded cached cleaned dataframe: C:\Users\A\Downloads\temp\GNN_Earthquake\Earthquake_GNN\earthquake_cleaned.parquet
+Raw shape: (3340460, 19)
+                     time  ... time_diff_raw
+0 1990-01-01 00:22:33.990  ...      0.000000
+1 1990-01-01 00:24:51.210  ...    137.220001
+2 1990-01-01 00:34:43.450  ...    592.239990
+3 1990-01-01 00:58:32.130  ...   1428.680054
+4 1990-01-01 01:03:44.490  ...    312.359985
+
+[5 rows x 19 columns]
+Columns: ['time', 'place', 'status', 'tsunami', 'significance', 'data_type', 'magnitudo', 'state', 'longitude', 'latitude', 'depth', 'time_diff', 'dist_prev', 'latitude_raw', 'longitude_raw', 'depth_raw', 'magnitudo_raw', 'dist_prev_raw', 'time_diff_raw']
+Loaded cached cleaned parquet
+Cleaned shape: (3340460, 19)
+                     time  ... time_diff_raw
+0 1990-01-01 00:22:33.990  ...      0.000000
+1 1990-01-01 00:24:51.210  ...    137.220001
+2 1990-01-01 00:34:43.450  ...    592.239990
+3 1990-01-01 00:58:32.130  ...   1428.680054
+4 1990-01-01 01:03:44.490  ...    312.359985
+
+[5 rows x 19 columns]
+time            datetime64[ms]
+latitude               float64
+longitude              float64
+depth                  float64
+magnitudo              float64
+significance             int64
+dtype: object
+RUN_EDA = False, skipping plots.
+Loaded cached labeled parquet
+target
+0    1690214
+1    1650246
+Name: count, dtype: int64
+Positive rate: 0.4940175903917425
+Loaded cached train/val/test splits and scaler
+Split sizes: 2839391 250534 250535
+Positive rate train: 0.5556712689446434
+Positive rate val  : 0.21608244789130418
+Positive rate test : 0.07321132775859661
+MODEL_FEATURE_COLS: ['latitude', 'longitude', 'depth', 'magnitudo', 'dist_prev', 'time_diff', 'significance']
+Sequence dataset sizes: 354921 31314 31314
+Train window positive rate: 0.5563942193984985
+Epoch 2/8:   0%|          | 0/347 [00:00<?, ?it/s]{'epoch': 1, 'train_loss': 0.60388, 'val_f1': 0.35486, 'val_precision': 0.2157, 'val_recall': 1.0, 'val_auc_roc': 0.5056, 'best_threshold': 0.25}
+Epoch 3/8:   0%|          | 0/347 [00:00<?, ?it/s]{'epoch': 2, 'train_loss': 0.59476, 'val_f1': 0.35597, 'val_precision': 0.21769, 'val_recall': 0.97572, 'val_auc_roc': 0.52919, 'best_threshold': 0.25}
+Epoch 4/8:   0%|          | 0/347 [00:00<?, ?it/s]{'epoch': 3, 'train_loss': 0.59282, 'val_f1': 0.35521, 'val_precision': 0.21728, 'val_recall': 0.97276, 'val_auc_roc': 0.52875, 'best_threshold': 0.3}
+{'epoch': 4, 'train_loss': 0.5918, 'val_f1': 0.35589, 'val_precision': 0.2169, 'val_recall': 0.99067, 'val_auc_roc': 0.53176, 'best_threshold': 0.25}
+Early stopping triggered at epoch 4
+
+LSTM test metrics
+{
+  "threshold": 0.25,
+  "precision": 0.07152775535247198,
+  "recall": 0.9892809289861545,
+  "f1": 0.13340962476660845,
+  "accuracy": 0.08105000958037939,
+  "balanced_accuracy": 0.5001950646650463,
+  "auc_roc": 0.5421162254215411,
+  "tpr_at_20_fpr": 0.2541313086199196,
+  "actual_fpr_at_selected_roc_point": 0.19993121238177128,
+  "roc_threshold_at_20_fpr": 0.41959989070892334,
+  "avg_batch_latency_ms": 0.547069999932622,
+  "ms_per_event": 0.0021369921872368045
+}
+Loading cached graphs: C:\Users\A\Downloads\temp\GNN_Earthquake\Earthquake_GNN\train_graphs.pt
+Loading cached graphs: C:\Users\A\Downloads\temp\GNN_Earthquake\Earthquake_GNN\val_graphs.pt
+Loading cached graphs: C:\Users\A\Downloads\temp\GNN_Earthquake\Earthquake_GNN\test_graphs.pt
+Validated 20 graphs. All structurally valid: True
+Graph counts: 15000 3000 3000
+GAT epoch 2/10:   0%|          | 0/235 [00:00<?, ?it/s]{'epoch': 1, 'train_loss': 0.21509, 'val_f1': 0.36267, 'val_precision': 0.30088, 'val_recall': 0.45638, 'val_auc_roc': 0.61595, 'best_threshold': 0.6}
+GAT epoch 3/10:   0%|          | 0/235 [00:00<?, ?it/s]{'epoch': 2, 'train_loss': 0.1777, 'val_f1': 0.442, 'val_precision': 0.39295, 'val_recall': 0.50503, 'val_auc_roc': 0.64034, 'best_threshold': 0.75}
+GAT epoch 4/10:   0%|          | 0/235 [00:00<?, ?it/s]{'epoch': 3, 'train_loss': 0.15263, 'val_f1': 0.42382, 'val_precision': 0.39311, 'val_recall': 0.45973, 'val_auc_roc': 0.59474, 'best_threshold': 0.15}
+GAT epoch 5/10:   0%|          | 0/235 [00:00<?, ?it/s]{'epoch': 4, 'train_loss': 0.13586, 'val_f1': 0.40259, 'val_precision': 0.38846, 'val_recall': 0.41779, 'val_auc_roc': 0.5748, 'best_threshold': 0.2}
+{'epoch': 5, 'train_loss': 0.11915, 'val_f1': 0.44003, 'val_precision': 0.43393, 'val_recall': 0.44631, 'val_auc_roc': 0.59931, 'best_threshold': 0.35}
+Early stopping triggered at epoch 5
+
+GAT test metrics
+{
+  "threshold": 0.75,
+  "precision": 0.2736625514403292,
+  "recall": 0.764367816091954,
+  "f1": 0.403030303030303,
+  "accuracy": 0.7373333333333333,
+  "balanced_accuracy": 0.7490768190565351,
+  "auc_roc": 0.8259229642343233,
+  "tpr_at_20_fpr": 0.6695402298850575,
+  "actual_fpr_at_selected_roc_point": 0.19984917043740574,
+  "roc_threshold_at_20_fpr": 0.8602350354194641,
+  "avg_batch_latency_ms": 42.959899999550544,
+  "ms_per_event": 0.6712484374929772
+}
+RUN_HYPERPARAM_TUNING = ARGS.run_hyperparam_tuning
+   model         metric  ...  delta_vs_overall_target  meets_overall_target
+0   LSTM      precision  ...                -0.779472                 False
+1   LSTM         recall  ...                 0.151281                  True
+2   LSTM             f1  ...                -0.705590                 False
+3   LSTM        auc_roc  ...                -0.215884                 False
+4   LSTM  tpr_at_20_fpr  ...                -0.645869                 False
+5   LSTM   ms_per_event  ...                99.997863                  True
+6    GAT      precision  ...                -0.577337                 False
+7    GAT         recall  ...                -0.073632                 False
+8    GAT             f1  ...                -0.435970                 False
+9    GAT        auc_roc  ...                 0.067923                  True
+10   GAT  tpr_at_20_fpr  ...                -0.230460                 False
+11   GAT   ms_per_event  ...                99.328752                  True
+
+[12 rows x 7 columns]
+                       comparison  ...                                               note
+0  GAT vs LSTM F1 improvement (%)  ...  This is NOT ETAS LTSS; shown only as an intern...
+
+[1 rows x 4 columns]
+
+Process finished with exit code 0

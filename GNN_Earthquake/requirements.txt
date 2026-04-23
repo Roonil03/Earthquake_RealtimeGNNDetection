@@ -1,0 +1,9 @@
+joblib
+numpy
+pandas
+pyarrow
+scikit-learn
+tqdm
+optuna
+kagglehub
+matplotlib
