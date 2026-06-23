@@ -1,5 +1,13 @@
 **/.venv
 **/.idea
 **/__pycache__
-**/artifacts
-**/Earthquake_GNN
+*.pt
+*.parquet
+*.pt.zip
+venv/
+logs/
+logs_old/
+visualizations/
+visualization_outputs/
+artifacts/
+.ipynb_checkpoints/
