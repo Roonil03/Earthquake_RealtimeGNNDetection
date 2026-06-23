@@ -4,7 +4,7 @@ An advanced Earthquake Foreshock Prediction pipeline leveraging Spatio-Temporal 
 
 ## Documentation & Methodology
 
-Please refer to the [docs/methodology.md](docs/methodology.md) for a comprehensive deep-dive into the spatio-temporal graphing approach, metric optimizations, and model architectures.
+Please refer to the [Methodology](docs/methodology.md) for a comprehensive deep-dive into the spatio-temporal graphing approach, metric optimizations, and model architectures.
 
 >  **Research Paper**: [Placeholder Link to Published Paper](#)
 
@@ -31,5 +31,6 @@ uv pip install jupyter ipykernel
 
 ## Contributors
 
-- **Roonil03** - *[Placeholder Role / Institution]*
-- **[Placeholder Name]** - *[Placeholder Role / Institution]*
+- [**Roonil03**](https://github.com/Roonil03)
+- [**Aaryan Paranjape**](https://github.com/galactonebulose)
+- [**SUPERSUPERSUPERuser**](https://github.com/SUPERSUPERSUPERuser)
