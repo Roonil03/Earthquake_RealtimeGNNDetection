@@ -6,7 +6,7 @@ An advanced Earthquake Foreshock Prediction pipeline leveraging Spatio-Temporal 
 
 Please refer to the [Methodology](docs/methodology.md) for a comprehensive deep-dive into the spatio-temporal graphing approach, metric optimizations, and model architectures.
 
->  **Research Paper**: [Placeholder Link to Published Paper](#)
+>  **Research Paper**: [Placeholder Link to Published Paper](to be updated soon)
 
 ## Repository Structure
 
