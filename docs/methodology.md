@@ -1,4 +1,4 @@
-# Member B Documentation: Model Design, Baseline, Graph Input Format, and Dataset Split
+# Summarized Methodology and other Documentation
 
 ## Scope
 This document covers:
