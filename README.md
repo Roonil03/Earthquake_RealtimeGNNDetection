@@ -34,3 +34,21 @@ uv pip install jupyter ipykernel
 - [**Roonil03**](https://github.com/Roonil03)
 - [**Aaryan Paranjape**](https://github.com/galactonebulose)
 - [**SUPERSUPERSUPERuser**](https://github.com/SUPERSUPERSUPERuser)
+
+## Citation
+If you use this code in your research, please cite our paper:
+
+**[Your Paper Title]** *Author 1, Author 2, Author 3* Published in: [Name of IEEE Conference/Journal, Year]  
+DOI: [Insert DOI link here]
+
+```bibtex
+@article{yourLastName202X,
+  author={Lastname, Firstname and Lastname, Firstname},
+  journal={IEEE Transactions on ...}, 
+  title={Your Paper Title}, 
+  year={202X},
+  volume={X},
+  number={X},
+  pages={XX-XX},
+  doi={10.1109/XXXX.XXXX.XXXX}
+}

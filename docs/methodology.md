@@ -485,39 +485,7 @@ train_df.to_parquet("train_earthquake.parquet", index=False)
 val_df.to_parquet("val_earthquake.parquet", index=False)
 test_df.to_parquet("test_earthquake.parquet", index=False)
 ```
-
 ---
-
-## 8) Recommended Next Step for Member B
-
-1. Fix timestamp parsing
-2. Recompute temporal features
-3. Freeze node and edge feature schema
-4. Build graph windows as PyG `Data` objects
-5. Train LSTM baseline first
-6. Train ST-GAT model
-7. Compare on:
-   - Precision
-   - Recall
-   - F1
-   - AUC-ROC
-   - LTSS
-   - inference latency
-
----
-
-## 9) Final Verdict on the Notebook
-
-### Will the current notebook work properly for the GNN?
-**Not yet.**
-
-### What must be fixed before it will work properly?
-- correct timestamp parsing
-- recompute `time_diff`
-- build real graph edges instead of only `dist_prev`
-- define labels explicitly
-- create temporal split before modeling
-- export graph-ready tensors / PyG objects
 
 Once these are done, the notebook will be on the correct path for both:
 - the **GAT + temporal model**
