@@ -39,7 +39,7 @@ uv pip install jupyter ipykernel
 If you use this code in your research, please cite our paper:
 
 **Graph Neural Network-based Real-Time Foreshock Sequence Detection from Earthquake Catalogues:-** *Aaryan Paranjape, Aryan Vivek, Aryan Chandra* Published in: 2026 6th International Conference on Inventive Computation and Information Technologies (ICICIT) 
-DOI:  10.1109/ICICIT69063.2026.11633983
+DOI: 10.1109/ICICIT69063.2026.11633983
 
 ```bibtex
 @article{yourLastName202X,
