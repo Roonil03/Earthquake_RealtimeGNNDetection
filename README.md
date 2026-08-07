@@ -6,7 +6,7 @@ An advanced Earthquake Foreshock Prediction pipeline leveraging Spatio-Temporal 
 
 Please refer to the [Methodology](docs/methodology.md) for a comprehensive deep-dive into the spatio-temporal graphing approach, metric optimizations, and model architectures.
 
->  **Research Paper**: [Placeholder Link to Published Paper](to be updated soon)
+>  **Research Paper**: https://ieeexplore.ieee.org/document/11633983
 
 ## Repository Structure
 
@@ -38,8 +38,8 @@ uv pip install jupyter ipykernel
 ## Citation
 If you use this code in your research, please cite our paper:
 
-**[Your Paper Title]** *Author 1, Author 2, Author 3* Published in: [Name of IEEE Conference/Journal, Year]  
-DOI: [Insert DOI link here]
+**Graph Neural Network-based Real-Time Foreshock Sequence Detection from Earthquake Catalogues:-** *Aaryan Paranjape, Aryan Vivek, Aryan Chandra* Published in: 2026 6th International Conference on Inventive Computation and Information Technologies (ICICIT) 
+DOI: 10.1109/ICICIT69063.2026.11633983
 
 ```bibtex
 @article{yourLastName202X,
